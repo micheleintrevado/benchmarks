@@ -8,3 +8,10 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
+/confronto_nimblecsv_csv/bench/data/customers-500000.csv
+/confronto_nimblecsv_csv/bench/data/customers-1000000.csv
+/confronto_nimblecsv_csv/bench/data/customers-2000000.csv
+/confronto_csv/bench/data/customers-500000.csv
+/confronto_csv/bench/data/customers-1000000.csv
+/confronto_csv/bench/data/customers-2000000.csv
+*.benchee

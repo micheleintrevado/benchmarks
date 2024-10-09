@@ -1,9 +1,9 @@
-defmodule ConfrontoCsv.MixProject do
+defmodule NimbleLz4.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :confronto_csv,
+      app: :nimble_lz4,
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
@@ -21,11 +21,10 @@ defmodule ConfrontoCsv.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:nimble_lz4, "~> 1.1.0"},
+      {:benchee, "~> 1.3.1", only: :dev}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-      {:benchee, "~> 1.3.1", only: :dev},
-      {:csv, "~> 2.5"},
-      {:benchee_html, "~> 1.0", only: :dev}
     ]
   end
 end

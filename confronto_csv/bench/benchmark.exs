@@ -1,7 +1,10 @@
 # confronto parsing tra CSV 3.2 e CSV 2.5
 inputs = %{
   "sales.csv" => File.stream!("bench/data/10000_sales.csv"),
-  "customers-100000.csv" => File.stream!("bench/data/customers-100000.csv")
+  "customers-100000.csv" => File.stream!("bench/data/customers-100000.csv"),
+  "customers-500000.csv" => File.stream!("bench/data/customers-500000.csv"),
+  "customers-1000000.csv" => File.stream!("bench/data/customers-1000000.csv"),
+  "customers-2000000.csv" => File.stream!("bench/data/customers-2000000.csv")
 }
 
 Benchee.run(
@@ -19,3 +22,9 @@ Benchee.run(
 )
 
 Benchee.report(load: ["bench/bench_csv_2.5.benchee", "bench/bench_csv_3.2.benchee"])
+{:ok, binary1} = File.read!("bench/bench_csv_3.2.benchee")
+report1 = :erlang.binary_to_term(binary1)
+
+
+
+Benchee.Formatters.Console.output(report)

@@ -1,7 +1,10 @@
 # confronto parsing tra nimbleCSV e CSV
 inputs = %{
   "sales.csv" => File.stream!("bench/data/10000_sales.csv"),
-  "customers-100000.csv" => File.stream!("bench/data/customers-100000.csv")
+  "customers-100000.csv" => File.stream!("bench/data/customers-100000.csv"),
+  "customers-500000.csv" => File.stream!("bench/data/customers-500000.csv"),
+  "customers-1000000.csv" => File.stream!("bench/data/customers-1000000.csv"),
+  "customers-2000000.csv" => File.stream!("bench/data/customers-2000000.csv")
 }
 
 Benchee.run(

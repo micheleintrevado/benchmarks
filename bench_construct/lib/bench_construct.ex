@@ -1,6 +1,6 @@
-defmodule NimbleLz4 do
+defmodule BenchConstruct do
   @moduledoc """
-  Documentation for `NimbleLz4`.
+  Documentation for `BenchConstruct`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule NimbleLz4 do
 
   ## Examples
 
-      iex> NimbleLz4.hello()
+      iex> BenchConstruct.hello()
       :world
 
   """

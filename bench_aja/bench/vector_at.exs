@@ -24,7 +24,7 @@ Benchee.run(
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "at.benchee")]
+  save: [path: Path.join(__DIR__, "vector_at.benchee")]
 )
 
-Benchee.report(load: ["bench/at.benchee"])
+Benchee.report(load: ["bench/vector_at.benchee"])

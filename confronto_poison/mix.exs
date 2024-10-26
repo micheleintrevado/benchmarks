@@ -22,7 +22,8 @@ defmodule ConfrontoPoison.MixProject do
   defp deps do
     [
       {:poison, "~> 6.0"},
-      {:benchee, "~> 1.3.1", only: :dev}
+      {:benchee, "~> 1.3.1", only: :dev},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 end

@@ -8,17 +8,17 @@ inputs = %{
 }
 
 Benchee.run(
-    %{
-        "list reverse" => fn {list, _vector} -> Enum.reverse(list) end,
-        "aja reverse" => fn {_list, vector} -> Aja.Vector.reverse(vector) end
-    },
-    title: "comparing aja reverse and elixir list reverse",
-    inputs: inputs,
-    parallel: 4,
-    time: 10,
-    memory_time: 5,
-    measure_function_call_overhead: true,
-    save: [path: Path.join(__DIR__, "reverse.benchee")]
+     %{
+          "list concat" => fn {list, _vector} -> Enum.concat(list, list) end,
+          "aja concat" => fn {_list, vector} -> Aja.Vector.concat(vector, vector) end
+     },
+     title: "comparing aja concat and elixir list concat",
+     inputs: inputs,
+     parallel: 4,
+     time: 10,
+     memory_time: 5,
+     measure_function_call_overhead: true,
+     save: [path: Path.join(__DIR__, "vector_concat.benchee")]
 )
 
-Benchee.report(load: ["bench/reverse.benchee"])
+Benchee.report(load: ["bench/vector_concat.benchee"])

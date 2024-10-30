@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-1000000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">CSV 2.5 Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for CSV 2.5.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">CSV 2.5</td>
+        
+        
+          <td>0.0541</td>
+          <td>18.47 s</td>
+          <td>±0.00%</td>
+          <td>18.47 s</td>
+          <td>none</td>
+          <td>18.47 s</td>
+          <td>18.47 s</td>
+        
+        <td>4</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">CSV 2.5 Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for CSV 2.5.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">CSV 2.5</td>
+        
+        
+          <td>7.30 GB</td>
+          <td>±0.00%</td>
+          <td>7.30 GB</td>
+          <td>none</td>
+          <td>7.30 GB</td>
+          <td>7.30 GB</td>
+        
+        <td>4</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+          <section class="benchee-plot-container">
+            <div id="memory-histogram" class="plot"></div>
+          </section>
+          <section class="benchee-plot-container">
+            <div id="raw-memory" class="plot"></div>
+          </section>
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"CSV 2.5","job_name":"CSV 2.5","input_name":"customers-1000000.csv","run_time_data":{"statistics":{"maximum":18469478400,"mode":null,"sample_size":4,"average":18468812800.0,"std_dev_ratio":4.353977838479905e-5,"ips":0.05414533196199812,"std_dev_ips":2.357475754196775e-6,"percentiles":{"50":18469017600.0,"99":18469478400.0},"median":18469017600.0,"minimum":18467737600,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":804128.01634234},"samples":[18467737600,18469478400,18469376000,18468659200]},"memory_usage_data":{"statistics":{"maximum":7841091952,"mode":null,"sample_size":4,"average":7.8410474e9,"std_dev_ratio":8.533236291345486e-6,"ips":null,"std_dev_ips":null,"percentiles":{"50":7.8410743e9,"99":7841091952.0},"median":7.8410743e9,"minimum":7840949048,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":66909.51023584016},"samples":[7840949048,7841061544,7841091952,7841087056]},"tag":null};
+
+      var inputHeadline = " (customers-1000000.csv)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

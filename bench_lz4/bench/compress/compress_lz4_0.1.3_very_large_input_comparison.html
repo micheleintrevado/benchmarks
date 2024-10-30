@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    very_large_input
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="compress_lz4_0.1.3_very_large_input_lz4_0_1_3.html">lz4_0.1.3</a></td>
+        
+        
+          <td>0.23</td>
+          <td>4.42 s</td>
+          <td>±42.20%</td>
+          <td>5.19 s</td>
+          <td>none</td>
+          <td>1.85 s</td>
+          <td>6.27 s</td>
+        
+        <td>12</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-1 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-1 plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          Memory Usage Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="This is a memory usage comparison"
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="compress_lz4_0.1.3_very_large_input_lz4_0_1_3.html">lz4_0.1.3</a></td>
+        
+        
+          <td>64 B</td>
+          <td>±0.00%</td>
+          <td>64 B</td>
+          <td>64 B</td>
+          <td>64 B</td>
+          <td>64 B</td>
+        
+        <td>4</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-comparison" class="job-count-1 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-box-plot" class="job-count-1 plot"></div>
+        </section>
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"lz4_0.1.3","job_name":"lz4_0.1.3","input_name":"very_large_input","run_time_data":{"statistics":{"maximum":6270873600,"mode":null,"sample_size":12,"average":4.4211968e9,"std_dev_ratio":0.4220090147853845,"ips":0.2261831004672762,"std_dev_ips":0.09545130738929887,"percentiles":{"50":5.1915264e9,"99":6.2708736e9},"median":5.1915264e9,"minimum":1854361600,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":1865784905.7402947},"samples":[1854361600,4949504000,6270873600,1930342400,5258342400,6047129600,1907507200,5180825600,6192947200,2175590400,5202227200,6084710400]},"memory_usage_data":{"statistics":{"maximum":64,"mode":64,"sample_size":4,"average":64.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":64.0,"99":64.0},"median":64.0,"minimum":64,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":0.0},"samples":[64,64,64,64]},"tag":null}];
+      var inputHeadline = " (very_large_input)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+        drawMemoryComparisonChart(scenarios, inputHeadline);
+        drawMemoryComparisonBoxPlot(scenarios, inputHeadline);
+      
+    </script>
+  </body>
+</html>

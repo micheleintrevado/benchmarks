@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-1000000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">CSV 3.2 Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for CSV 3.2.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">CSV 3.2</td>
+        
+        
+          <td>0.30</td>
+          <td>3.29 s</td>
+          <td>±1.19%</td>
+          <td>3.29 s</td>
+          <td>none</td>
+          <td>3.24 s</td>
+          <td>3.37 s</td>
+        
+        <td>16</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">CSV 3.2 Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for CSV 3.2.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">CSV 3.2</td>
+        
+        
+          <td>4.65 GB</td>
+          <td>±0.00%</td>
+          <td>4.65 GB</td>
+          <td>none</td>
+          <td>4.65 GB</td>
+          <td>4.65 GB</td>
+        
+        <td>4</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+          <section class="benchee-plot-container">
+            <div id="memory-histogram" class="plot"></div>
+          </section>
+          <section class="benchee-plot-container">
+            <div id="raw-memory" class="plot"></div>
+          </section>
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"CSV 3.2","job_name":"CSV 3.2","input_name":"customers-1000000.csv","run_time_data":{"statistics":{"maximum":3367628800,"mode":null,"sample_size":16,"average":3.29056e9,"std_dev_ratio":0.011855478541738346,"ips":0.303899640182826,"std_dev_ips":0.0036028756630294982,"percentiles":{"50":3.2901632e9,"99":3.3676288e9},"median":3.2901632e9,"minimum":3237376000,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":39011163.47030253},"samples":[3237376000,3289497600,3327897600,3290828800,3261644800,3249971200,3332505600,3320832000,3279257600,3237990400,3325952000,3245670400,3264614400,3305574400,3367628800,3311718400]},"memory_usage_data":{"statistics":{"maximum":4988442752,"mode":null,"sample_size":4,"average":4988401294.0,"std_dev_ratio":8.209901472631652e-6,"ips":null,"std_dev_ips":null,"percentiles":{"50":4988400628.0,"99":4988442752.0},"median":4988400628.0,"minimum":4988361168,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":40954.283129688236},"samples":[4988442752,4988361168,4988429800,4988371456]},"tag":null};
+
+      var inputHeadline = " (customers-1000000.csv)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

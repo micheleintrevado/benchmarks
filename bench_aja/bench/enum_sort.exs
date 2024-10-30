@@ -20,7 +20,11 @@ Benchee.run(
  time: 10,
  memory_time: 5,
  measure_function_call_overhead: true,
- save: [path: Path.join(__DIR__, "enum_sort.benchee")]
+ save: [path: Path.join(__DIR__, "enum_sort.benchee")],
+ formatters: [
+   Benchee.Formatters.Console,
+   {Benchee.Formatters.HTML, file: Path.join(__DIR__, "enum_sort/enum_sort.html")}
+ ]
 )
 
 Benchee.report(load: ["bench/enum_sort.benchee"])

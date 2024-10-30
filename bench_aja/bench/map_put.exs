@@ -18,7 +18,11 @@ Benchee.run(
  time: 10,
  memory_time: 5,
  measure_function_call_overhead: true,
- save: [path: Path.join(__DIR__, "map_put.benchee")]
+ save: [path: Path.join(__DIR__, "map_put.benchee")],
+ formatters: [
+   Benchee.Formatters.Console,
+   {Benchee.Formatters.HTML, file: Path.join(__DIR__, "map_put/map_put.html")}
+ ]
 )
 
 Benchee.report(load: ["bench/map_put.benchee"])

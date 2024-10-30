@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-1000000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_1000000_csv_nimble_csv.html">nimble_csv</a></td>
+        
+        
+          <td>0.66</td>
+          <td>1.51 s</td>
+          <td>±1.87%</td>
+          <td>1.50 s</td>
+          <td>none</td>
+          <td>1.47 s</td>
+          <td>1.58 s</td>
+        
+        <td>28</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_1000000_csv_csv.html">csv</a></td>
+        
+        
+          <td>0.32</td>
+          <td>3.16 s</td>
+          <td>±0.72%</td>
+          <td>3.16 s</td>
+          <td>none</td>
+          <td>3.12 s</td>
+          <td>3.20 s</td>
+        
+        <td>16</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-2 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-2 plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          Memory Usage Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="This is a memory usage comparison"
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_1000000_csv_nimble_csv.html">nimble_csv</a></td>
+        
+        
+          <td>1.38 GB</td>
+          <td>±0.00%</td>
+          <td>1.38 GB</td>
+          <td>1.38 GB</td>
+          <td>1.38 GB</td>
+          <td>1.38 GB</td>
+        
+        <td>8</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_1000000_csv_csv.html">csv</a></td>
+        
+        
+          <td>4.65 GB</td>
+          <td>±0.00%</td>
+          <td>4.65 GB</td>
+          <td>none</td>
+          <td>4.65 GB</td>
+          <td>4.65 GB</td>
+        
+        <td>4</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-comparison" class="job-count-2 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-box-plot" class="job-count-2 plot"></div>
+        </section>
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"nimble_csv","job_name":"nimble_csv","input_name":"customers-1000000.csv","run_time_data":{"statistics":{"maximum":1583718400,"mode":null,"sample_size":28,"average":1.5110144e9,"std_dev_ratio":0.018732735044146836,"ips":0.6618070615342911,"std_dev_ips":0.012397456334067258,"percentiles":{"50":1.5023616e9,"99":1.5837184e9},"median":1.5023616e9,"minimum":1474867200,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":28305432.403090503},"samples":[1496985600,1544704000,1507225600,1502310400,1575526400,1496166400,1477222400,1493606400,1516646400,1498419200,1507737600,1583718400,1495961600,1490124800,1474867200,1550950400,1491148800,1509478400,1542860800,1482342400,1492582400,1490636800,1530777600,1482444800,1507430400,1541120000,1502412800,1522995200]},"memory_usage_data":{"statistics":{"maximum":1484238992,"mode":1484238992,"sample_size":8,"average":1484238992.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":1484238992.0,"99":1484238992.0},"median":1484238992.0,"minimum":1484238992,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":0.0},"samples":[1484238992,1484238992,1484238992,1484238992,1484238992,1484238992,1484238992,1484238992]},"tag":null},{"name":"csv","job_name":"csv","input_name":"customers-1000000.csv","run_time_data":{"statistics":{"maximum":3202867200,"mode":null,"sample_size":16,"average":3.1604992e9,"std_dev_ratio":0.007193940650880527,"ips":0.3164057121102894,"std_dev_ips":0.002276203914521012,"percentiles":{"50":3.1580672e9,"99":3.2028672e9},"median":3.1580672e9,"minimum":3124838400,"absolute_difference":1.6494848e9,"relative_less":0.4780935872409017,"relative_more":2.0916406885334777,"std_dev":22736443.671955384},"samples":[3132416000,3143577600,3202867200,3152691200,3157094400,3174195200,3149107200,3124838400,3134668800,3176857600,3182182400,3171430400,3159040000,3141529600,3195904000,3169587200]},"memory_usage_data":{"statistics":{"maximum":4988394256,"mode":null,"sample_size":4,"average":4988376230.0,"std_dev_ratio":3.3010110534933992e-6,"ips":null,"std_dev_ips":null,"percentiles":{"50":4988377880.0,"99":4988394256.0},"median":4988377880.0,"minimum":4988354904,"absolute_difference":3504137238.0,"relative_less":0.2975395045533685,"relative_more":3.3608982494646655,"std_dev":16466.685074213732},"samples":[4988394256,4988381640,4988374120,4988354904]},"tag":null}];
+      var inputHeadline = " (customers-1000000.csv)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+        drawMemoryComparisonChart(scenarios, inputHeadline);
+        drawMemoryComparisonBoxPlot(scenarios, inputHeadline);
+      
+    </script>
+  </body>
+</html>

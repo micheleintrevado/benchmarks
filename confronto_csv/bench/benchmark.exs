@@ -9,8 +9,8 @@ inputs = %{
 
 Benchee.run(
   %{
-    # "CSV 3.2" => fn data -> CSV.decode!(data) |> Stream.run() end
-    "CSV 2.5" => fn data -> CSV.decode!(data) |> Stream.run() end
+    "CSV 3.2" => fn data -> CSV.decode!(data) |> Stream.run() end
+    # "CSV 2.5" => fn data -> CSV.decode!(data) |> Stream.run() end
   },
   inputs: inputs,
   title: "parsing comparison CSV 3.2 vs CSV 2.5",
@@ -18,13 +18,11 @@ Benchee.run(
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "bench_csv_2.5.benchee")]
+  save: [path: Path.join(__DIR__, "bench_csv_3.2.benchee")],
+  formatters: [
+    Benchee.Formatters.Console,
+    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "csv_3.2/bench_csv_2.5.html")}
+  ]
 )
 
 Benchee.report(load: ["bench/bench_csv_2.5.benchee", "bench/bench_csv_3.2.benchee"])
-{:ok, binary1} = File.read!("bench/bench_csv_3.2.benchee")
-report1 = :erlang.binary_to_term(binary1)
-
-
-
-Benchee.Formatters.Console.output(report)

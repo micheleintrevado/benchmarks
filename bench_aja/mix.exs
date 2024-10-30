@@ -22,6 +22,7 @@ defmodule BenchAja.MixProject do
   defp deps do
     [
       {:benchee, "~> 1.0", only: :dev},
+      {:benchee_html, "~> 1.0", only: :dev},
       {:aja, "~> 0.7.0"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
       # {:dep_from_hexpm, "~> 0.3.0"},

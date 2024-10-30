@@ -15,17 +15,21 @@ inputs = %{
 
 Benchee.run(
   %{
-    "Poison6" => fn data-> Poison.decode!(data) |> Poison.encode!() end
-    #"Poison5" => fn data -> Poison.decode!(data) |> Poison.encode!() end
+    # "Poison6" => fn data-> Poison.decode!(data) |> Poison.encode!() end
+    "Poison5" => fn data -> Poison.decode!(data) |> Poison.encode!() end
   },
   inputs: inputs,
 
-  title: "encode_Poison_6.0",
+  title: "decode_encode_Poison_5.0",
   parallel: 4,
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "full_bench_poison_6.benchee")]
+  save: [path: Path.join(__DIR__, "poison_5.benchee")],
+  formatters: [
+    Benchee.Formatters.Console,
+    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "poison_5/poison_5.html")}
+  ]
 )
 
-Benchee.report(load: ["bench/full_bench_poison_5.benchee", "bench/full_bench_poison_6.benchee"])
+Benchee.report(load: ["bench/poison_5.benchee", "bench/poison_6.benchee"])

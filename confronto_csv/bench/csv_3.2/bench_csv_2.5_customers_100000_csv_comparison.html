@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-100000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_csv_2.5_customers_100000_csv_csv_3_2.html">CSV 3.2</a></td>
+        
+        
+          <td>3.14</td>
+          <td>318.27 ms</td>
+          <td>±3.81%</td>
+          <td>318.16 ms</td>
+          <td>314.57 ms, 316.83 ms</td>
+          <td>277.91 ms</td>
+          <td>355.74 ms</td>
+        
+        <td>128</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-1 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-1 plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          Memory Usage Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="This is a memory usage comparison"
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_csv_2.5_customers_100000_csv_csv_3_2.html">CSV 3.2</a></td>
+        
+        
+          <td>475.65 MB</td>
+          <td>±0.00%</td>
+          <td>475.65 MB</td>
+          <td>none</td>
+          <td>475.62 MB</td>
+          <td>475.67 MB</td>
+        
+        <td>36</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-comparison" class="job-count-1 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-box-plot" class="job-count-1 plot"></div>
+        </section>
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"CSV 3.2","job_name":"CSV 3.2","input_name":"customers-100000.csv","run_time_data":{"statistics":{"maximum":355737600,"mode":[314572800,316825600],"sample_size":128,"average":3.182712e8,"std_dev_ratio":0.03808363827369335,"ips":3.1419745173298748,"std_dev_ips":0.11965782098315321,"percentiles":{"50":3.181568e8,"99":354520064.0},"median":3.181568e8,"minimum":277913600,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":12120925.253734311},"samples":[330342400,314470400,330240000,311091200,323993600,329011200,314265600,317030400,318361600,310476800,314572800,351539200,316825600,328499200,323481600,313753600,312217600,316825600,312832000,320409600,335360000,315187200,332492800,321945600,319795200,326451200,322560000,313446400,299929600,313753600,291532800,288972800,327577600,310988800,316518400,314572800,313446400,313651200,316825600,315084800,323276800,317440000,331980800,318668800,339865600,327372800,318054400,324710400,313753600,318156800,321024000,320512000,306585600,315084800,322150400,322662400,319078400,314572800,314572800,309452800,294092800,301568000,301056000,277913600,323276800,308019200,321945600,315904000,316620800,315596800,325939200,325836800,320614400,327782400,326451200,343961600,327987200,316825600,318156800,321638400,322355200,340377600,322355200,355737600,306688000,324812800,315494400,323584000,321945600,330854400,335257600,324710400,296038400,308224000,285696000,297472000,329011200,323686400,333209600,313241600,313036800,315084800,330137600,329420800,333312000,310374400,325324800,316928000,319488000,330854400,318976000,323891200,313856000,317440000,314982400,335974400,322355200,317337600,315904000,319180800,316723200,318054400,318361600,306176000,293273600,322252800,284160000,294604800]},"memory_usage_data":{"statistics":{"maximum":498779440,"mode":null,"sample_size":36,"average":498753508.4444444,"std_dev_ratio":2.5035013356808295e-5,"ips":null,"std_dev_ips":null,"percentiles":{"50":498755464.0,"99":498779440.0},"median":498755464.0,"minimum":498728528,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":12486.300745661665},"samples":[498763008,498758776,498753224,498756608,498752312,498736352,498741976,498754320,498738912,498748208,498763112,498728648,498751328,498743616,498733800,498739184,498779440,498728528,498746768,498776920,498768432,498756688,498766664,498748224,498757048,498756840,498764664,498752192,498761232,498759584,498743160,498742984,498770328,498760008,498763560,498759656]},"tag":null}];
+      var inputHeadline = " (customers-100000.csv)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+        drawMemoryComparisonChart(scenarios, inputHeadline);
+        drawMemoryComparisonBoxPlot(scenarios, inputHeadline);
+      
+    </script>
+  </body>
+</html>

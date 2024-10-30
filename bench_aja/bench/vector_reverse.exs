@@ -18,7 +18,11 @@ Benchee.run(
     time: 10,
     memory_time: 5,
     measure_function_call_overhead: true,
-    save: [path: Path.join(__DIR__, "vector_reverse.benchee")]
+    save: [path: Path.join(__DIR__, "vector_reverse.benchee")],
+    formatters: [
+      Benchee.Formatters.Console,
+      {Benchee.Formatters.HTML, file: Path.join(__DIR__, "vector_reverse/vector_reverse.html")}
+    ]
 )
 
 Benchee.report(load: ["bench/vector_reverse.benchee"])

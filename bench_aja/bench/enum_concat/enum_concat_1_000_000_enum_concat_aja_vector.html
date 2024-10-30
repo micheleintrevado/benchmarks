@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    1_000_000
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">enum_concat_aja_vector Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for enum_concat_aja_vector.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">enum_concat_aja_vector</td>
+        
+        
+          <td>4.07</td>
+          <td>245.92 ms</td>
+          <td>±13.24%</td>
+          <td>243.76 ms</td>
+          <td>256 ms, 228.56 ms, 250.78 ms</td>
+          <td>175.51 ms</td>
+          <td>361.27 ms</td>
+        
+        <td>164</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">enum_concat_aja_vector Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for enum_concat_aja_vector.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">enum_concat_aja_vector</td>
+        
+        
+          <td>134.89 MB</td>
+          <td>±0.00%</td>
+          <td>134.89 MB</td>
+          <td>134.89 MB</td>
+          <td>134.89 MB</td>
+          <td>134.89 MB</td>
+        
+        <td>36</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"enum_concat_aja_vector","job_name":"enum_concat_aja_vector","input_name":"1_000_000","run_time_data":{"statistics":{"maximum":361267200,"mode":[256000000,228556800,250777600],"sample_size":164,"average":245922965.85365853,"std_dev_ratio":0.13236779602854587,"ips":4.06631400417914,"std_dev_ips":0.538249022693204,"percentiles":{"50":2.437632e8,"99":357539839.99999994},"median":2.437632e8,"minimum":175513600,"absolute_difference":224786283.16440496,"relative_less":0.08594838882120259,"relative_more":11.634889422770774,"std_dev":32552280.98285212},"samples":[271052800,238899200,257024000,253440000,259379200,196403200,259584000,246476800,325427200,241459200,226713600,199270400,240537600,270028800,255283200,273612800,188825600,235622400,238080000,228761600,232243200,235212800,218419200,250777600,324608000,215449600,242892800,259686400,183705600,279859200,241356800,227328000,232857600,218419200,243097600,268800000,313139200,203468800,262963200,268185600,191488000,263372800,223539200,260915200,250470400,259584000,210432000,242688000,265113600,355532800,227532800,230809600,207155200,245760000,280780800,261017600,276480000,193228800,236544000,225894400,228556800,236236800,235520000,244736000,305049600,297881600,212377600,250777600,261632000,184729600,237465600,227225600,232652800,236032000,228556800,251084800,281088000,298905600,237158400,249139200,277708800,175513600,257331200,221286400,247603200,248729600,257638400,192819200,239820800,228352000,344268800,237260800,230297600,212684800,247705600,283340800,272793600,303718400,192512000,238387200,228556800,228249600,234905600,235417600,251187200,273920000,296140800,206643200,265113600,271257600,180019200,247398400,227532800,229785600,229478400,254668800,243916800,280473600,304537600,213401600,259686400,254361600,218214400,250777600,249958400,248115200,254668800,255488000,210534400,233472000,253542400,361267200,251187200,212992000,195686400,247705600,292761600,247910400,263168000,185344000,243712000,242585600,235008000,237056000,233267200,243814400,277708800,300748800,229273600,248524800,270131200,194457600,238592000,235417600,256000000,234598400,228352000,270336000,256000000,301056000,230502400,256000000,254873600,180633600]},"memory_usage_data":{"statistics":{"maximum":141444816,"mode":141444816,"sample_size":36,"average":141444816.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":141444816.0,"99":141444816.0},"median":141444816.0,"minimum":141444816,"absolute_difference":137857312.0,"relative_less":0.02536327665766132,"relative_more":39.42708245063977,"std_dev":0.0},"samples":[141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816,141444816]},"tag":null};
+
+      var inputHeadline = " (1_000_000)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

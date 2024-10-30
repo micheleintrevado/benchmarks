@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-100000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">nimble_csv Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for nimble_csv.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">nimble_csv</td>
+        
+        
+          <td>6.65</td>
+          <td>150.30 ms</td>
+          <td>±3.40%</td>
+          <td>149.56 ms</td>
+          <td>150.32 ms</td>
+          <td>140.29 ms</td>
+          <td>170.19 ms</td>
+        
+        <td>268</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">nimble_csv Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for nimble_csv.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">nimble_csv</td>
+        
+        
+          <td>141.37 MB</td>
+          <td>±0.00%</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+        
+        <td>80</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"nimble_csv","job_name":"nimble_csv","input_name":"customers-100000.csv","run_time_data":{"statistics":{"maximum":170188800,"mode":150323200,"sample_size":268,"average":150297217.91044775,"std_dev_ratio":0.03398675864880573,"ips":6.653483104363478,"std_dev_ips":0.22613032444190825,"percentiles":{"50":1.495552e8,"99":169086976.0},"median":1.495552e8,"minimum":140288000,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":5108115.27070935},"samples":[150220800,150937600,153088000,151244800,152166400,153190400,149913600,154214400,151552000,149299200,160256000,144281600,147046400,158310400,151859200,144076800,148070400,147353600,146534400,151347200,150323200,150118400,146636800,145715200,148889600,152883200,143974400,145920000,165580800,145510400,147353600,148070400,148377600,142131200,146841600,148992000,146329600,145510400,154316800,151040000,147865600,148172800,142233600,149196800,150323200,148377600,154009600,149504000,150016000,151654400,141721600,143052800,150323200,147251200,153907200,152678400,155648000,150732800,153088000,154316800,156262400,160768000,156160000,155955200,149504000,160153600,154214400,147865600,147558400,149094400,154009600,152371200,145612800,153497600,154624000,150528000,150220800,158412800,151244800,145612800,149401600,170188800,143360000,147968000,148172800,148070400,149299200,150732800,149299200,143462400,143872000,148275200,145510400,143155200,147353600,148480000,154419200,145817600,147968000,149401600,141414400,146944000,149196800,154931200,149913600,154931200,150323200,157900800,144486400,141721600,151756800,146329600,145408000,151552000,150937600,145203200,144384000,150016000,142438400,152371200,146944000,157593600,150016000,162099200,156160000,151142400,146124800,145510400,155443200,161587200,144998400,150528000,152473600,150732800,144281600,149094400,148377600,159846400,146124800,149606400,155340800,159027200,159232000,153292800,154214400,150220800,149094400,155033600,151961600,143462400,154419200,145612800,148480000,150323200,150016000,149504000,147251200,147763200,147046400,147251200,148070400,148070400,153804800,147353600,149401600,152576000,147968000,147148800,147968000,147763200,148992000,144998400,158208000,144998400,149708800,145612800,140288000,145612800,149606400,145817600,152576000,149708800,151142400,169369600,142643200,151654400,145817600,155443200,150425600,152883200,149299200,147046400,150323200,145817600,159436800,152064000,153804800,158720000,151040000,154419200,152576000,143974400,153600000,149913600,146227200,163532800,150323200,154419200,151449600,152371200,149708800,150425600,145612800,147251200,152064000,148480000,143872000,143769600,146841600,145920000,150016000,148992000,148889600,144793600,159641600,148480000,146739200,151756800,147660800,148992000,151859200,155852800,147251200,154521600,156672000,146124800,148684800,151347200,152576000,151859200,168960000,143052800,147046400,140800000,146739200,145510400,145715200,151859200,146944000,149196800,148684800,143974400,155443200,157900800,154316800,154828800,154214400,164147200,146841600,147148800,142745600,154419200,150323200,153600000,146432000,149299200,168652800,157388800]},"memory_usage_data":{"statistics":{"maximum":148239016,"mode":148239016,"sample_size":80,"average":148239016.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":148239016.0,"99":148239016.0},"median":148239016.0,"minimum":148239016,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":0.0},"samples":[148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016]},"tag":null};
+
+      var inputHeadline = " (customers-100000.csv)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

@@ -24,7 +24,11 @@ Benchee.run(
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "vector_at.benchee")]
+  save: [path: Path.join(__DIR__, "vector_at.benchee")],
+  formatters: [
+    Benchee.Formatters.Console,
+    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "vector_at/vector_at.html")}
+  ]
 )
 
 Benchee.report(load: ["bench/vector_at.benchee"])

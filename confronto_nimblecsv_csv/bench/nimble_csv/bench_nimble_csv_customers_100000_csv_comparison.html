@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    customers-100000.csv
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          Run Time Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Comparisons of the different benchmarking jobs. For Iterations per Second higher is better, the black whiskers denote standard deviation. otherwise it is runtime so lower is better. The Box Plot shows a distribution of run times with the median and outliers."
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_100000_csv_nimble_csv.html">nimble_csv</a></td>
+        
+        
+          <td>6.65</td>
+          <td>150.30 ms</td>
+          <td>±3.40%</td>
+          <td>149.56 ms</td>
+          <td>150.32 ms</td>
+          <td>140.29 ms</td>
+          <td>170.19 ms</td>
+        
+        <td>268</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_100000_csv_csv.html">csv</a></td>
+        
+        
+          <td>3.17</td>
+          <td>315.50 ms</td>
+          <td>±5.76%</td>
+          <td>311.60 ms</td>
+          <td>307.40 ms, 305.25 ms, 315.80 ms, 308.94 ms, 306.59 ms</td>
+          <td>270.44 ms</td>
+          <td>422.30 ms</td>
+        
+        <td>129</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="ips-comparison" class="job-count-2 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-time-box-plot" class="job-count-2 plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          Memory Usage Comparison
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#comparison">
+            <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="This is a memory usage comparison"
+            ></i>
+          </a>
+        </h2>
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_100000_csv_nimble_csv.html">nimble_csv</a></td>
+        
+        
+          <td>141.37 MB</td>
+          <td>±0.00%</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+          <td>141.37 MB</td>
+        
+        <td>80</td>
+      </tr>
+    
+      
+      <tr>
+        
+          <td class="text-left"><a href="bench_nimble_csv_customers_100000_csv_csv.html">csv</a></td>
+        
+        
+          <td>475.65 MB</td>
+          <td>±0.00%</td>
+          <td>475.65 MB</td>
+          <td>none</td>
+          <td>475.62 MB</td>
+          <td>475.67 MB</td>
+        
+        <td>36</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-comparison" class="job-count-2 plot"></div>
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="memory-box-plot" class="job-count-2 plot"></div>
+        </section>
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenarios     = [{"name":"nimble_csv","job_name":"nimble_csv","input_name":"customers-100000.csv","run_time_data":{"statistics":{"maximum":170188800,"mode":150323200,"sample_size":268,"average":150297217.91044775,"std_dev_ratio":0.03398675864880573,"ips":6.653483104363478,"std_dev_ips":0.22613032444190825,"percentiles":{"50":1.495552e8,"99":169086976.0},"median":1.495552e8,"minimum":140288000,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":5108115.27070935},"samples":[150220800,150937600,153088000,151244800,152166400,153190400,149913600,154214400,151552000,149299200,160256000,144281600,147046400,158310400,151859200,144076800,148070400,147353600,146534400,151347200,150323200,150118400,146636800,145715200,148889600,152883200,143974400,145920000,165580800,145510400,147353600,148070400,148377600,142131200,146841600,148992000,146329600,145510400,154316800,151040000,147865600,148172800,142233600,149196800,150323200,148377600,154009600,149504000,150016000,151654400,141721600,143052800,150323200,147251200,153907200,152678400,155648000,150732800,153088000,154316800,156262400,160768000,156160000,155955200,149504000,160153600,154214400,147865600,147558400,149094400,154009600,152371200,145612800,153497600,154624000,150528000,150220800,158412800,151244800,145612800,149401600,170188800,143360000,147968000,148172800,148070400,149299200,150732800,149299200,143462400,143872000,148275200,145510400,143155200,147353600,148480000,154419200,145817600,147968000,149401600,141414400,146944000,149196800,154931200,149913600,154931200,150323200,157900800,144486400,141721600,151756800,146329600,145408000,151552000,150937600,145203200,144384000,150016000,142438400,152371200,146944000,157593600,150016000,162099200,156160000,151142400,146124800,145510400,155443200,161587200,144998400,150528000,152473600,150732800,144281600,149094400,148377600,159846400,146124800,149606400,155340800,159027200,159232000,153292800,154214400,150220800,149094400,155033600,151961600,143462400,154419200,145612800,148480000,150323200,150016000,149504000,147251200,147763200,147046400,147251200,148070400,148070400,153804800,147353600,149401600,152576000,147968000,147148800,147968000,147763200,148992000,144998400,158208000,144998400,149708800,145612800,140288000,145612800,149606400,145817600,152576000,149708800,151142400,169369600,142643200,151654400,145817600,155443200,150425600,152883200,149299200,147046400,150323200,145817600,159436800,152064000,153804800,158720000,151040000,154419200,152576000,143974400,153600000,149913600,146227200,163532800,150323200,154419200,151449600,152371200,149708800,150425600,145612800,147251200,152064000,148480000,143872000,143769600,146841600,145920000,150016000,148992000,148889600,144793600,159641600,148480000,146739200,151756800,147660800,148992000,151859200,155852800,147251200,154521600,156672000,146124800,148684800,151347200,152576000,151859200,168960000,143052800,147046400,140800000,146739200,145510400,145715200,151859200,146944000,149196800,148684800,143974400,155443200,157900800,154316800,154828800,154214400,164147200,146841600,147148800,142745600,154419200,150323200,153600000,146432000,149299200,168652800,157388800]},"memory_usage_data":{"statistics":{"maximum":148239016,"mode":148239016,"sample_size":80,"average":148239016.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":148239016.0,"99":148239016.0},"median":148239016.0,"minimum":148239016,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":0.0},"samples":[148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016,148239016]},"tag":null},{"name":"csv","job_name":"csv","input_name":"customers-100000.csv","run_time_data":{"statistics":{"maximum":422297600,"mode":[307404800,305254400,315801600,308940800,306585600],"sample_size":129,"average":315499162.7906977,"std_dev_ratio":0.0576485943136552,"ips":3.1695805185492696,"std_dev_ips":0.18272186145831174,"percentiles":{"50":3.116032e8,"99":410255359.9999995},"median":3.116032e8,"minimum":270438400,"absolute_difference":165201944.88024995,"relative_less":0.47637913388110953,"relative_more":2.0991683490687296,"std_dev":18188083.242018793},"samples":[320000000,333516800,324198400,336793600,335052800,313753600,314163200,313856000,316108800,320921600,316825600,315801600,318771200,322252800,316928000,310681600,314777600,316825600,321843200,314368000,323788800,326144000,315392000,315801600,314982400,335872000,382156800,330649600,275968000,334131200,422297600,313548800,308326400,309862400,305049600,305254400,302284800,309964800,305152000,308531200,316211200,310476800,321024000,315801600,307404800,313241600,307404800,311603200,306995200,341504000,324812800,306790400,306176000,309760000,308940800,304537600,302796800,308224000,318976000,355430400,270438400,296857600,310272000,342323200,306892800,307712000,323481600,323072000,306278400,310374400,304640000,305254400,317542400,329932800,305459200,316006400,317644800,307916800,308838400,308940800,299622400,304947200,321126400,308736000,320921600,306585600,308838400,320716800,308940800,308428800,306585600,318054400,359424000,271667200,296960000,332083200,330240000,306585600,304844800,326348800,305254400,305152000,317132800,315187200,308326400,306380800,311296000,307712000,306278400,311910400,310067200,307404800,305868800,308736000,310681600,333926400,314470400,304025600,319488000,306073600,312012800,301772800,304844800,312627200,376627200,290201600,282112000,344268800,337305600]},"memory_usage_data":{"statistics":{"maximum":498774352,"mode":null,"sample_size":36,"average":498753543.7777778,"std_dev_ratio":2.4782218394718967e-5,"ips":null,"std_dev_ips":null,"percentiles":{"50":498755916.0,"99":498774352.0},"median":498755916.0,"minimum":498725032,"absolute_difference":350514527.7777778,"relative_less":0.2972189728762081,"relative_more":3.3645227635467965,"std_dev":12360.219247040915},"samples":[498755888,498755944,498749728,498767728,498750480,498753888,498742032,498725032,498773936,498760472,498756544,498756672,498761880,498741312,498759872,498751576,498760560,498772368,498753528,498759912,498742560,498740000,498768368,498741328,498774352,498769856,498749320,498740296,498756152,498756472,498725760,498743744,498737376,498765032,498761960,498745648]},"tag":null}];
+      var inputHeadline = " (customers-100000.csv)";
+
+      
+        drawIpsComparisonChart(scenarios, inputHeadline);
+        drawRunTimeComparisonBoxPlot(scenarios, inputHeadline);
+      
+
+      
+        drawMemoryComparisonChart(scenarios, inputHeadline);
+        drawMemoryComparisonBoxPlot(scenarios, inputHeadline);
+      
+    </script>
+  </body>
+</html>

@@ -8,20 +8,24 @@ inputs = %{
 }
 
 Benchee.run(
- %{
+  %{
     "++" => fn {enum_list, _aja_vector} -> enum_list ++ enum_list end,
     "enum_concat_list" => fn {enum_list, _aja_vector} -> Enum.concat(enum_list, enum_list) end,
     "enum_concat_aja_vector" => fn {_enum_list, aja_vector} -> Enum.concat(aja_vector, aja_vector) end,
     "aja_concat_list" => fn {enum_list, _aja_vector} -> Aja.Enum.concat(enum_list, enum_list) end,
     "aja_concat_aja_vector" => fn {_enum_list, aja_vector} -> Aja.Enum.concat(aja_vector, aja_vector) end
- },
- title: "comparing enum concat and aja enum concat",
- inputs: inputs,
- parallel: 4,
- time: 10,
- memory_time: 5,
- measure_function_call_overhead: true,
- save: [path: Path.join(__DIR__, "enum_concat.benchee")]
+  },
+  title: "comparing enum concat and aja enum concat",
+  inputs: inputs,
+  parallel: 4,
+  time: 10,
+  memory_time: 5,
+  measure_function_call_overhead: true,
+  save: [path: Path.join(__DIR__, "enum_concat.benchee")],
+  formatters: [
+    Benchee.Formatters.Console,
+    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "enum_concat/enum_concat.html")}
+  ]
 )
 
 Benchee.report(load: ["bench/enum_concat.benchee"])

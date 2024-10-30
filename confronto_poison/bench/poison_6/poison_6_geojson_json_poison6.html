@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+  <span class="input-label">
+    geojson.json
+  </span>
+
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.17.1</li>
+    <li>Erlang: 27.0</li>
+    <li>Operating system: Windows</li>
+    <li>Available memory: 15.64 GB</li>
+    <li>CPU Information: 12th Gen Intel(R) Core(TM) i7-12700H</li>
+    <li>Number of Available Cores: 20</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">Poison6 Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for Poison6.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Poison6</td>
+        
+        
+          <td>3.16</td>
+          <td>316.92 ms</td>
+          <td>±1.92%</td>
+          <td>316.47 ms</td>
+          <td>310.17 ms, 309.76 ms, 314.88 ms, 317.44 ms</td>
+          <td>304.54 ms</td>
+          <td>338.94 ms</td>
+        
+        <td>128</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+      <article>
+        <h2>
+          <a name="memory" href="#memory">Poison6 Memory</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual memory usage distribution for Poison6.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">Poison6</td>
+        
+        
+          <td>74.96 MB</td>
+          <td>±0.00%</td>
+          <td>74.96 MB</td>
+          <td>74.96 MB</td>
+          <td>74.96 MB</td>
+          <td>74.96 MB</td>
+        
+        <td>64</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        
+      </article>
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.3.1 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.1</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-2.27.0.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"Poison6","job_name":"Poison6","input_name":"geojson.json","run_time_data":{"statistics":{"maximum":338944000,"mode":[310169600,309760000,314880000,317440000],"sample_size":128,"average":3.169152e8,"std_dev_ratio":0.01918090147947681,"ips":3.1554182317541097,"std_dev_ips":0.0605237662298205,"percentiles":{"50":3.164672e8,"99":337399807.99999994},"median":3.164672e8,"minimum":304537600,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":6078719.228548689},"samples":[317849600,318873600,309145600,312012800,333619200,321331200,317747200,320819200,316723200,315904000,318976000,323174400,314368000,318054400,313344000,316416000,313241600,312729600,316006400,310886400,316928000,323481600,309657600,315801600,313651200,313958400,313036800,310579200,314470400,323174400,319385600,311808000,310169600,312320000,310272000,314880000,332083200,331161600,318566400,322457600,314572800,319590400,324300800,310579200,321228800,318156800,311500800,308428800,309760000,316211200,311500800,324096000,316518400,309043200,318054400,318566400,313958400,323584000,320409600,319078400,312012800,315392000,314060800,317440000,316723200,324710400,309760000,315699200,338944000,324096000,326656000,322969600,319590400,323379200,323584000,321331200,313036800,314880000,304537600,313139200,310374400,315596800,315084800,312217600,317337600,320000000,320307200,312627200,310169600,314572800,308940800,309452800,319180800,309760000,318361600,322355200,320102400,315289600,311603200,313139200,332800000,319795200,309452800,320614400,321638400,322969600,321126400,325324800,312422400,314880000,310169600,307507200,324915200,318156800,326348800,315187200,319795200,317644800,308531200,322457600,317440000,317747200,307404800,306585600,315699200,307609600,317440000,326860800]},"memory_usage_data":{"statistics":{"maximum":78604024,"mode":78604024,"sample_size":64,"average":78604024.0,"std_dev_ratio":0.0,"ips":null,"std_dev_ips":null,"percentiles":{"50":78604024.0,"99":78604024.0},"median":78604024.0,"minimum":78604024,"absolute_difference":null,"relative_less":null,"relative_more":null,"std_dev":0.0},"samples":[78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024,78604024]},"tag":null};
+
+      var inputHeadline = " (geojson.json)"
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+        if (scenario.memory_usage_data.statistics.std_dev !== 0) {
+          drawMemoryHistogram(scenario, inputHeadline);
+          drawRawMemoryChart(scenario, inputHeadline);
+        };
+      
+    </script>
+  </body>
+</html>

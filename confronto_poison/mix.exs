@@ -21,8 +21,9 @@ defmodule ConfrontoPoison.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:poison, "~> 6.0"},
+      {:poison, "~> 5.0"},
       {:benchee, "~> 1.3.1", only: :dev},
+      {:benchee_html, "~> 1.0", only: :dev},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end

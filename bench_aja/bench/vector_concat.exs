@@ -18,7 +18,11 @@ Benchee.run(
      time: 10,
      memory_time: 5,
      measure_function_call_overhead: true,
-     save: [path: Path.join(__DIR__, "vector_concat.benchee")]
+     save: [path: Path.join(__DIR__, "vector_concat.benchee")],
+     formatters: [
+       Benchee.Formatters.Console,
+       {Benchee.Formatters.HTML, file: Path.join(__DIR__, "vector_concat/vector_concat.html")}
+     ]
 )
 
 Benchee.report(load: ["bench/vector_concat.benchee"])

@@ -22,7 +22,7 @@ Benchee.run(
   save: [path: Path.join(__DIR__, "enum_count.benchee")],
   formatters: [
     Benchee.Formatters.Console,
-    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "enum_count/enum_count_parallel.html")}
+    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "enum_count/enum_count.html")}
   ]
 )
 

@@ -5,6 +5,11 @@ defmodule OrderedMapListTuples do
         %OrderedMapListTuples{}
     end
 
+    def new(map) when is_map(map) do
+        data = map |> Enum.to_list() # Converts map into a list of key-value tuples
+        %OrderedMapListTuples{data: data}
+    end
+
     def put(%OrderedMapListTuples{data: data} = map, key, value) do
         data =
           case Enum.find_index(data, fn {k, _v} -> k == key end) do

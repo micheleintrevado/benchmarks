@@ -5,12 +5,13 @@ create_input= fn length ->
 end
 
 inputs = %{
-  "10" => create_input.(10),
-  "100" => create_input.(100),
-  "1_000" => create_input.(1_000),
-  "10_000" => create_input.(10_000),
-  "100_000" => create_input.(100_000),
-  "1_000_000" => create_input.(1_000_000)
+  # "10" => create_input.(10),
+  # "100" => create_input.(100),
+  # "1_000" => create_input.(1_000),
+  # "10_000" => create_input.(10_000),
+  # "100_000" => create_input.(100_000),
+  # "1_000_000" => create_input.(1_000_000),
+  "10_000_000" => create_input.(10_000_000)
 }
 
 Benchee.run(
@@ -20,15 +21,16 @@ Benchee.run(
   },
   title: "comparing aja at and elixir list at",
   inputs: inputs,
+  profile_after: true,
   parallel: 4,
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "vector_at.benchee")],
+  save: [path: Path.join(__DIR__, "vector_at_profiler.benchee")],
   formatters: [
-    Benchee.Formatters.Console,
-    {Benchee.Formatters.HTML, file: Path.join(__DIR__, "vector_at/vector_at.html")}
+    # Benchee.Formatters.Console,
+    # {Benchee.Formatters.HTML, file: Path.join(__DIR__, "vector_at/vector_at.html")}
   ]
 )
 
-Benchee.report(load: ["bench/vector_at.benchee"])
+# Benchee.report(load: ["bench/vector_at.benchee"])

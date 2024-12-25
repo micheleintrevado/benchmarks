@@ -20,12 +20,20 @@ inputs = %{
   #   Enum.reduce(1..1_000, OrderedMapListTuples.new(), fn n, acc -> OrderedMapListTuples.put(acc, Integer.to_string(n), n) end),
   #   :rand.uniform(1_000) |> Integer.to_string(),
   # },
-  "10_000" => {
-    (for n <- 1..10_000, into: %{}, do: {Integer.to_string(n), n}),
-    (for n <- 1..10_000, into: %{}, do: {Integer.to_string(n), n}) |> Aja.OrdMap.new(),
-    Enum.reduce(1..10_000, OrderedMapListMaps.new(), fn n, acc -> OrderedMapListMaps.put(acc, Integer.to_string(n), n) end),
-    Enum.reduce(1..10_000, OrderedMapListTuples.new(), fn n, acc -> OrderedMapListTuples.put(acc, Integer.to_string(n), n) end),
-    :rand.uniform(10_000) |> Integer.to_string(),
+  # "10_000" => {
+  #   (for n <- 1..10_000, into: %{}, do: {Integer.to_string(n), n}),
+  #   (for n <- 1..10_000, into: %{}, do: {Integer.to_string(n), n}) |> Aja.OrdMap.new(),
+  #   Enum.reduce(1..10_000, OrderedMapListMaps.new(), fn n, acc -> OrderedMapListMaps.put(acc, Integer.to_string(n), n) end),
+  #   Enum.reduce(1..10_000, OrderedMapListTuples.new(), fn n, acc -> OrderedMapListTuples.put(acc, Integer.to_string(n), n) end),
+  #   :rand.uniform(10_000) |> Integer.to_string(),
+  # },
+
+  "2_000_000" => {
+    (for n <- 1..2_000_000, into: %{}, do: {Integer.to_string(n), n}),
+    (for n <- 1..2_000_000, into: %{}, do: {Integer.to_string(n), n}) |> Aja.OrdMap.new(),
+    (for n <- 1..2_000_000, into: %{}, do: {Integer.to_string(n), n}) |> OrderedMapListMaps.new(),
+    (for n <- 1..2_000_000, into: %{}, do: {Integer.to_string(n), n}) |> OrderedMapListTuples.new(),
+    :rand.uniform(2_000_000) |> Integer.to_string(),
   }
 }
 
@@ -39,16 +47,16 @@ Benchee.run(
   },
   title: "Comparing get function on various ordered maps and Elixir Map",
   inputs: inputs,
-  profile_after: :fprof,
+  profile_after: true,
   parallel: 4,
   time: 10,
   memory_time: 5,
   measure_function_call_overhead: true,
-  save: [path: Path.join(__DIR__, "custom_map_get.benchee")],
+  save: [path: Path.join(__DIR__, "custom_map_get_profiler.benchee")],
   formatters: [
     # Benchee.Formatters.Console,
     # {Benchee.Formatters.HTML, file: Path.join(__DIR__, "get/custom_map_get.html")}
   ]
 )
 
-Benchee.report(load: ["bench/custom_map_get.benchee"])
+# Benchee.report(load: ["bench/custom_map_get_profiler.benchee"])

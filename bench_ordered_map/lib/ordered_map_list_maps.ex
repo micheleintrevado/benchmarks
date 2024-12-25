@@ -5,6 +5,11 @@ defmodule OrderedMapListMaps do
     %OrderedMapListMaps{}
   end
 
+  def new(initial_map) when is_map(initial_map) do
+    keys_in_order = Enum.map(initial_map, fn {key, _value} -> key end)
+    %OrderedMapListMaps{data: initial_map, order: keys_in_order}
+  end
+
   def put(%OrderedMapListMaps{data: data, order: order} = map, key, value) do
     {new_data, new_order} =
       if Map.has_key?(data, key) do

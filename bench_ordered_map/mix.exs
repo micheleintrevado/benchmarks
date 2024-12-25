@@ -23,7 +23,7 @@ defmodule BenchOrderedMap.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-      {:benchee, "~> 1.0", only: :dev},
+      {:benchee, "~> 1.3.1", only: :dev},
       {:benchee_html, "~> 1.0", only: :dev},
       {:aja, "~> 0.7.1"}
     ]
